@@ -3,12 +3,13 @@
 all: bin/mkmap bin/find_sqr
 
 bin/mkmap: src/mkmap.c
+	mkdir -p bin
 	cc src/mkmap.c -o bin/mkmap
 
 bin/find_sqr: src/main.c
+	mkdir -p bin
 	cc src/main.c -o bin/find_sqr
 
-# some tests
 test1: bin/mkmap bin/find_sqr
 	./bin/mkmap 5 5 10 | ./bin/find_sqr
 
