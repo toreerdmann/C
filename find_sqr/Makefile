@@ -11,7 +11,7 @@ bin/find_sqr: src/main.c
 	cc src/main.c -o bin/find_sqr
 
 test1: bin/mkmap bin/find_sqr
-	./bin/mkmap 5 5 10 | ./bin/find_sqr
+	./bin/mkmap 10 10 10 | ./bin/find_sqr
 
 test2: bin/mkmap bin/find_sqr
 	./bin/mkmap 100 100 50 | ./bin/find_sqr
